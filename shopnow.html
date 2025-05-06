@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop now</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+      
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Encode Sans', sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.hero {
+  background-color: #8e82ab;
+  background-image: url(./images/section-bgimage1\ \(1\).jpg);
+  background-size: cover;
+  height: 390px;
+  text-align: center;
+  padding: 50px 20px;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+  padding-left: 480px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.hero-content button {
+  padding: 10px 20px;
+  background-color: #2b407e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  margin-top: 20px;
+}
+
+.hero-content button:hover{
+  background-color: #f8f8f8;
+  color: #3358c4;
+}
+
+
+.offers {
+  display: flex;
+  justify-content: space-around;
+  background-color: #2b407e;
+  color: white;
+  padding: 10px 0;
+  height: 90px;
+  font-size: 14px;
+  align-items: center;
+}
+
+.offer-item{
+  text-align: center;
+  border-left: solid 1px #d4ebf8;
+  padding: 0 35px;
+}
+
+.offer-item:first-child{
+  border-left: none;
+}
+
+.offer-item a {
+  color: #d4ebf8;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+
+.products {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.products h2 {
+  font-size: 1.5rem;
+  color: #888;
+}
+
+.products h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 0.9rem;
+}
+
+.product-item {
+  position: relative;
+  background: white;
+  border: 1px solid #ddd;
+  width: 20rem;
+  padding: 15px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  transition: opacity 0.3s ease;
+}
+
+.product-item .overlay i {
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.product-item:hover img {
+  transform: scale(1.1);
+}
+
+.product-item:hover .overlay {
+  opacity: 1;
+}
+
+.product-item .overlay i:hover {
+  transform: scale(1.2);
+}
+
+
+.product-item p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.product-item span {
+  font-size: 1.2rem;
+  color: #e94c4c;
+}
+
+
+.arrivals {
+  display: flex;
+  gap: 1px;
+  padding: 40px 20px;
+  background-color: #e2e2e2;
+  text-align: center;
+}
+
+.arrival-item {
+  flex: 1;
+  padding: 20px;
+  color: white;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 350px;
+
+}
+
+.arrival-item h4 {
+  font-size: 1rem;
+  color: #fff;
+  padding-top: 30px;
+}
+
+.arrival-item h2 {
+  font-size: 2.2rem;
+  color: #fff;
+  padding-top: 15px;
+}
+
+.arrival-item p{
+  padding-top: 20px;
+}
+
+.arrival-item button {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: black;
+  width: 150px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.arrival-item button:hover{
+  color: #fff;
+  background-color: #2b407e;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.arrival-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(29, 24, 24, 0.5);
+  z-index: 1;
+}
+
+.arrival-item h4,
+.arrival-item h2,
+.arrival-item p,
+.arrival-item button {
+  position: relative;
+  z-index: 2;
+}
+
+
+.touch-of-color {
+  background-image: url(./images/section-image-banner2a.jpg)
+}
+
+.bomber-jackets {
+  background-image: url(./images/section-image-banner2b.jpg)
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-item {
+  font-size: 0.9rem;
+  border-left: 1px solid #ddd;
+  padding: 0 35px;
+}
+
+.footer-item:first-child{
+  border-left: none;
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+        padding-left: 0;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        padding-left: 0;
+    }
+
+    .offers {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .offer-item {
+        border-left: none;
+        border-bottom: 1px solid #d4ebf8;
+        padding: 10px 0;
+    }
+
+    .offer-item:last-child {
+        border-bottom: none;
+    }
+
+    .cart-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .cart-button span {
+        display: none;
+    }
+
+    .cart-button i {
+        font-size: 1.5em;
+    }
+
+    .product-list {
+        gap: 15px;
+    }
+
+    .product-item {
+        width: 100%;
+        max-width: none;
+    }
+
+    .arrivals {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .arrival-item {
+        min-height: 250px;
+    }
+
+    .arrival-item h2 {
+        font-size: 1.8rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-item {
+        border-left: none;
+        border-bottom: 1px solid #ddd;
+        padding: 15px 0;
+    }
+
+    .footer-item:last-child {
+        border-bottom: none;
+    }
+
+    
+    .modal-content,
+    .cart-modal-content,
+    .checkout-modal-content {
+        width: 95%;
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .cart-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .quantity-controls {
+        justify-content: center;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+        padding-left: 240px;
+    }
+
+    .offers {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .product-list {
+        gap: 15px;
+    }
+
+    .product-item {
+        width: calc(50% - 15px);
+    }
+
+    .cart-item {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+    }
+
+    .footer-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+
+    </style>
+</head>
+<body>
+  
+<section class="hero">
+    <div class="hero-content">
+      <p>Big Sale Up to 30% off</p>
+      <h1>Shop For Great Selection Of T-Shirts</h1>
+      <button>Shop now</button>
+    </div>
+  </section>
+  
+  
+  <section class="offers">
+    <div class="offer-item">
+     <p>Order online & get it today</p> 
+     <a href="#">Shop now</a>
+    </div>
+    <div class="offer-item">
+     <p>BACO 50% off Branded Tees</p>
+     <a href="#">Shop now</a>
+    </div>
+    <div class="offer-item">
+    <p>20% off on Export Tees</p> 
+    <a href="#">Shop now</a></div>
+  </section>
+  
+  
+  <section class="products">
+    <h2>Top View This Week</h2>
+    <h3>Product Of The Week</h3>
+    <div class="product-list">
+      <div class="product-item">
+        <img src="./images/CottonAdjustableCaps3.jpg" alt="Cotton Adjustable Caps">
+        <p>Cotton Adjustable Caps</p>
+        <span>$8.54</span>
+        <div class="overlay">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-cart-plus"></i>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="./images/LongSleeveSweatshirts.jpg" alt="Long Sleeve Sweatshirts">
+        <p>Long Sleeve Sweatshirts</p>
+        <span>$13.65</span>
+        <div class="overlay">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-cart-plus"></i>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="./images/Short-SleeveT-Shirt2.jpg" alt="Short Sleeve T-Shirt">
+        <p>Short Sleeve T-Shirt</p>
+        <span>$18.47</span>
+        <div class="overlay">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-cart-plus"></i>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="./images/RegularFitT-Shirt1.jpg" alt="Regular Fit T-Shirt">
+        <p>Regular Fit T-Shirt</p>
+        <span>$8.36</span>
+        <div class="overlay">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-cart-plus"></i>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="./images/PulloverHoodie.jpg" alt="Pullover Hoodie">
+        <p>Pullover Hoodie</p>
+        <span>$12.65</span>
+        <div class="overlay">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-cart-plus"></i>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="./images/Women_sRibbedT-Shirt3.jpg" alt="Women's Ribbed T-Shirt3">
+        <p>Women's Ribbed T-Shirt</p>
+        <span>$19.35</span>
+        <div class="overlay">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-cart-plus"></i>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="./images/Men_sSweatPulloverHoodie3.jpg" alt="Men's Sweat Pullover Hoodie">
+        <p>Men's Sweat Pullover Hoodie</p>
+        <span>$13.68</span>
+        <div class="overlay">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-cart-plus"></i>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="./images/PerformanceT-Shirt3.jpg" alt="Performance T-Shirt">
+        <p>Performance T-Shirt</p>
+        <span>$10.24</span>
+        <div class="overlay">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-cart-plus"></i>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="./images/Classic Bomber Jacket.jpeg" alt="classic bomber Jacket">
+        <p>Classic Bomber Jacket</p>
+        <span>$20.65</span>
+        <div class="overlay">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-cart-plus"></i>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="./images/MA-1 bomber jacket.jpeg" alt="MA-1 bomber jacket">
+        <p>MA-1 Bomber Jacket</p>
+        <span>$22.45</span>
+        <div class="overlay">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-cart-plus"></i>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="./images/Trucker Denim Jacket.jpeg" alt="Trucker Denim Jacket">
+        <p>Trucker Denim Jacket</p>
+        <span>$30.69</span>
+        <div class="overlay">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-cart-plus"></i>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="./images/Distressed Denim Jacket.jpeg" alt="Distressed Denim Jacket">
+        <p>Distressed Denim Jacket</p>
+        <span>$32.69</span>
+        <div class="overlay">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-cart-plus"></i>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="./images/Three piece suit.jpeg" alt="Three Piece Suit">
+        <p>Three Piece Suit</p>
+        <span>$45.50</span>
+        <div class="overlay">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-cart-plus"></i>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="./images/Double breasted suit.jpeg" alt="Double Breasted Suit">
+        <p>Double Breasted Suit</p>
+        <span>$47.60</span>
+        <div class="overlay">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-cart-plus"></i>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="./images/Biker leather jacket.jpeg" alt="Biker Leather Jacket">
+        <p>Biker Leather Jacket</p>
+        <span>$37.79</span>
+        <div class="overlay">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-cart-plus"></i>
+        </div>
+      </div>
+      <div class="product-item">
+        <img src="./images/Bomber leather jacket.jpeg" alt="Bomber Leather Jacket">
+        <p>Bomber Leather Jacket</p>
+        <span>$39.65</span>
+        <div class="overlay">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-cart-plus"></i>
+        </div>
+      </div>
+    
+    </div>
+  </section>
+  
+  
+  <section class="arrivals">
+    <div class="arrival-item touch-of-color">
+      <h4>NEW ARRIVALS</h4>
+      <h2>TOUCH OF COLOR</h2>
+      <p>The Crew Neck style T-Shirt</p>
+      <button>Shop Now</button>
+    </div>
+    <div class="arrival-item bomber-jackets">
+      <h4>DISCOVER THEM ALL</h4>
+      <h2>A TOUCH OF CLASS</h2>
+      <p>The Scoop Neck Style T-Shirt</p>
+      <button>Shop Now</button>
+    </div>
+  </section>
+  
+  
+  <footer class="footer">
+    <div class="footer-item">
+      <i class="fas fa-water"></i>
+      <span> Machine Wash</span>
+      <p>Gentle or Delicate Washing</p>
+    </div>
+    <div class="footer-item">
+      <i class="fas fa-temperature-high"></i>
+      <span>Ironing Temperature</span>
+      <p>Iron at maximum 150°C or 300°F</p>
+    </div>
+    <div class="footer-item">
+      <i class="fas fa-temperature-low"></i>
+      <span>Water Temperature</span>
+      <p>Wash at or below 30°C or 80°F<p>
+      </div>
+  </footer>
+
+  <script>
+    // Store state
+let favorites = new Set();
+let cartItems = new Map(); // Maps product ID to {quantity, name, price}
+
+// Helper function to generate unique IDs for products
+function generateProductId(productName, price) {
+    return `${productName.toLowerCase().replace(/\s+/g, '-')}-${price}`;
+}
+
+// Parse price string to number
+function parsePrice(priceString) {
+    return parseFloat(priceString.replace('$', ''));
+}
+
+// Format price to string
+function formatPrice(price) {
+    return `$${price.toFixed(2)}`;
+}
+
+// Initialize products with IDs
+function initializeProducts() {
+    const products = document.querySelectorAll('.product-item');
+    products.forEach(product => {
+        const name = product.querySelector('p').textContent;
+        const price = product.querySelector('span').textContent;
+        const id = generateProductId(name, price);
+        product.dataset.productId = id;
+    });
+}
+
+// Favorite functionality
+function toggleFavorite(productId) {
+    if (favorites.has(productId)) {
+        favorites.delete(productId);
+        return false;
+    } else {
+        favorites.add(productId);
+        return true;
+    }
+}
+
+// Cart functionality
+function addToCart(productId, quantity = 1) {
+    const productElement = document.querySelector(`[data-product-id="${productId}"]`);
+    const name = productElement.querySelector('p').textContent;
+    const price = parsePrice(productElement.querySelector('span').textContent);
+    
+    const currentItem = cartItems.get(productId);
+    if (currentItem) {
+        currentItem.quantity += quantity;
+        cartItems.set(productId, currentItem);
+    } else {
+        cartItems.set(productId, { quantity, name, price });
+    }
+    updateCartUI();
+}
+
+function updateCartQuantity(productId, newQuantity) {
+    if (newQuantity <= 0) {
+        cartItems.delete(productId);
+    } else {
+        const item = cartItems.get(productId);
+        item.quantity = newQuantity;
+        cartItems.set(productId, item);
+    }
+    updateCartUI();
+}
+
+function removeFromCart(productId) {
+    cartItems.delete(productId);
+    updateCartUI();
+}
+
+// Calculate cart total
+function calculateCartTotal() {
+    let total = 0;
+    cartItems.forEach(item => {
+        total += item.price * item.quantity;
+    });
+    return total;
+}
+
+// Show cart modal
+function showCartModal() {
+    const modal = document.createElement('div');
+    modal.className = 'cart-modal';
+    
+    let cartContent = `
+        <div class="cart-modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div class="cart-items">
+    `;
+    
+    if (cartItems.size === 0) {
+        cartContent += '<p>Your cart is empty</p>';
+    } else {
+        cartItems.forEach((item, productId) => {
+            cartContent += `
+                <div class="cart-item" data-product-id="${productId}">
+                    <span class="item-name">${item.name}</span>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" value="${item.quantity}" min="1" class="quantity-input">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <span class="item-price">${formatPrice(item.price * item.quantity)}</span>
+                    <button class="remove-item">&times;</button>
+                </div>
+            `;
+        });
+    }
+    
+    const total = calculateCartTotal();
+    cartContent += `
+            </div>
+            <div class="cart-total">
+                <strong>Total: ${formatPrice(total)}</strong>
+            </div>
+            <button class="checkout-btn" ${cartItems.size === 0 ? 'disabled' : ''}>
+                Proceed to Checkout
+            </button>
+        </div>
+    `;
+    
+    modal.innerHTML = cartContent;
+    document.body.appendChild(modal);
+    
+    // Add event listeners
+    modal.querySelector('.close-modal').onclick = () => modal.remove();
+    modal.onclick = (e) => {
+        if (e.target === modal) modal.remove();
+    };
+    
+    // Quantity control listeners
+    modal.querySelectorAll('.cart-item').forEach(item => {
+        const productId = item.dataset.productId;
+        const quantityInput = item.querySelector('.quantity-input');
+        
+        item.querySelector('.minus').onclick = () => {
+            const newQuantity = parseInt(quantityInput.value) - 1;
+            if (newQuantity >= 1) {
+                updateCartQuantity(productId, newQuantity);
+            }
+        };
+        
+        item.querySelector('.plus').onclick = () => {
+            const newQuantity = parseInt(quantityInput.value) + 1;
+            updateCartQuantity(productId, newQuantity);
+        };
+        
+        quantityInput.onchange = () => {
+            const newQuantity = parseInt(quantityInput.value);
+            if (newQuantity >= 1) {
+                updateCartQuantity(productId, newQuantity);
+            } else {
+                quantityInput.value = 1;
+            }
+        };
+        
+        item.querySelector('.remove-item').onclick = () => {
+            removeFromCart(productId);
+        };
+    });
+    
+    // Checkout button listener
+    modal.querySelector('.checkout-btn').onclick = () => {
+        modal.remove();
+        showCheckoutModal();
+    };
+}
+
+// Show checkout modal
+function showCheckoutModal() {
+    const modal = document.createElement('div');
+    modal.className = 'checkout-modal';
+    
+    modal.innerHTML = `
+        <div class="checkout-modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Checkout</h2>
+            <form id="payment-form">
+                <div class="form-group">
+                    <label>Card Holder Name</label>
+                    <input type="text" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label>Card Number</label>
+                    <input type="number" required placeholder="1234 5678 9012 3456">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Expiry Date</label>
+                        <input type="text" required placeholder="MM/YY">
+                    </div>
+                    <div class="form-group">
+                        <label>CVV</label>
+                        <input type="number" required placeholder="123">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Shipping Address</label>
+                    <textarea required placeholder="Enter your shipping address"></textarea>
+                </div>
+                <div class="checkout-total">
+                    Total to pay: ${formatPrice(calculateCartTotal())}
+                </div>
+                <button type="submit" class="pay-btn">Pay Now</button>
+            </form>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // Add event listeners
+    modal.querySelector('.close-modal').onclick = () => modal.remove();
+    modal.onclick = (e) => {
+        if (e.target === modal) modal.remove();
+    };
+    
+    // Handle form submission
+    modal.querySelector('#payment-form').onsubmit = (e) => {
+        e.preventDefault();
+        // Simulate payment processing
+        const payBtn = modal.querySelector('.pay-btn');
+        payBtn.disabled = true;
+        payBtn.textContent = 'Processing...';
+        
+        setTimeout(() => {
+        alert('Payment Successful!, your order has been placed');
+        cartItems.clear();
+        updateCartUI();
+        modal.remove();
+        }, 2000);
+    };
+}
+
+// Update UI elements
+function updateCartUI() {
+    const totalItems = Array.from(cartItems.values())
+        .reduce((sum, item) => sum + item.quantity, 0);
+    
+    // Update cart button if it exists
+    const cartButton = document.querySelector('.cart-button');
+    if (cartButton) {
+      cartButton.innerHTML = `<i class="fas fa-shopping-cart"></i> Cart (${totalItems})`;
+    }
+    
+    // Update any open cart modal
+    const cartModal = document.querySelector('.cart-modal');
+    if (cartModal) {
+        showCartModal(); // Refresh the cart modal
+        cartModal.remove(); // Remove the old one
+    }
+}
+
+// Initialize event listeners
+function initializeEventListeners() {
+    const products = document.querySelectorAll('.product-item');
+    
+    products.forEach(product => {
+        const heartIcon = product.querySelector('.fa-heart');
+        const searchIcon = product.querySelector('.fa-search');
+        const cartIcon = product.querySelector('.fa-cart-plus');
+        
+        heartIcon.onclick = (e) => {
+            e.stopPropagation();
+            const isFavorited = toggleFavorite(product.dataset.productId);
+            heartIcon.style.color = isFavorited ? '#ff6b6b' : 'white';
+        };
+        
+        searchIcon.onclick = (e) => {
+            e.stopPropagation();
+            showProductDetails(product);
+        };
+        
+        cartIcon.onclick = (e) => {
+            e.stopPropagation();
+            addToCart(product.dataset.productId);
+            cartIcon.style.transform = 'scale(1.2)';
+            setTimeout(() => {
+                cartIcon.style.transform = 'scale(1)';
+            }, 200);
+        };
+    });
+    
+    // Add cart button to header
+    const header = document.querySelector('.offers');
+    const cartButton = document.createElement('button');
+    cartButton.className = 'cart-button';
+    cartButton.innerHTML = '<i class="fas fa-shopping-cart"></i> Cart (0)';
+    cartButton.onclick = showCartModal;
+    header.appendChild(cartButton);
+}
+
+// Add necessary styles
+function addStyles() {
+    const styles = `
+        .product-modal, .cart-modal, .checkout-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .modal-content, .cart-modal-content, .checkout-modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .close-modal {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .cart-button {
+            background-color: #2b407e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 20px;
+            display: flex;
+            align-items: center
+            gap:8px
+        }
+        
+        .cart-button i {
+          font-size: 1.4em;
+        }
+        
+        .cart-item {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr auto;
+            gap: 10px;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .quantity-btn {
+            background-color: #eee;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        
+        .quantity-input {
+            width: 50px;
+            text-align: center;
+        }
+        
+        .remove-item {
+            background: none;
+            border: none;
+            color: #ff6b6b;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        .cart-total {
+            margin-top: 20px;
+            text-align: right;
+            font-size: 1.2em;
+        }
+        
+        .checkout-btn, .pay-btn {
+            background-color: #2b407e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .checkout-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .checkout-total {
+            margin: 20px 0;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    `;
+    
+    const styleSheet = document.createElement('style');
+    styleSheet.textContent = styles;
+    document.head.appendChild(styleSheet);
+}
+
+// Initialize everything
+document.addEventListener('DOMContentLoaded', () => {
+    initializeProducts();
+    addStyles();
+    initializeEventListeners();
+});
+  </script>
+   
+</body>
+</html>
